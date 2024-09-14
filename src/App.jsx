@@ -25,7 +25,7 @@ function App() {
           "Content-type": "application/json"
         }
       };
-      const response = await axios.post('https://fb-login-server-jet.vercel.app/api/login/user', userInfo, config)
+      const response = await axios.post('https://fbloginserver.onrender.com/api/login/user', userInfo, config)
       console.log(response)
       if (response.status === 201) {
         window.location.reload()
